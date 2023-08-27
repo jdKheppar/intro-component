@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      .colors {
+        color: hsl(0, 100%, 74%);
+        color: hsl(154, 59%, 51%);
+        color: hsl(248, 32%, 49%);
+        color: hsl(249, 10%, 26%);
+        color: hsl(246, 25%, 77%);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("./images/bg-intro-desktop.png");
+        background-color: hsl(0, 100%, 74%);
+      }
+
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .inner-container {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 80%;
+      }
+      .inner-container_left {
+        padding: 15%;
+      }
+      .inner-container_left h1 {
+        font-size: 4rem;
+        font-weight: bold;
+      }
+      .inner-container_left p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+      .inner-container_right {
+        color: white;
+        padding: 40px;
+      }
+
+      .d-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+      input {
+        width: 80%;
+        height: 40px;
+        margin-bottom: 20px;
+      }
+      #fname {
+        margin-top: 20px;
+      }
+      .btn {
+        height: auto;
+        width: 80%;
+        padding: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        margin-bottom: 20px;
+        background-color: hsl(154, 59%, 51%);
+        cursor: pointer;
+      }
+      #offer-btn {
+        background-color: hsl(248, 32%, 49%);
+        color: white;
+        display: block;
+        width: 100%;
+      }
+      .inner-container_left {
+        color: white;
+      }
+      #para {
+        color: black;
+        width: 70%;
+      }
+      .terms {
+        color: hsl(0, 100%, 74%);
+      }
+      /* For Tablet Size Screens */
+      @media only screen and (max-width: 1000px) and (min-width: 376px) {
+        .inner-container {
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      /* For Mobile size screens */
+      @media only screen and (max-width: 375px) {
+        body {
+          background-image: url("./images/bg-intro-mobile.png");
+        }
+        .inner-container {
+          width: 95%;
+          grid-template-columns: auto;
+          margin-top: 3vh;
+          margin-bottom: 3vh;
+        }
+        .btn {
+          width: 50%;
+        }
+        .inner-container_right h1 {
+          font-size: 2rem;
+        }
+        .inner-container_right p {
+          font-size: 0.8rem;
+          line-height: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="inner-container">
+          <div class="inner-container_left">
+            <h1>Learn to code by watching others</h1>
+            <p>
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
+          </div>
+          <div class="inner-container_right">
+            <button class="btn" id="offer-btn">
+              Try it free 7 days then $20/mo. thereafter
+            </button>
+            <form class="d-flex" action="submit">
+              <input type="text" placeholder="  First Name" id="fname" />
+              <input type="text" placeholder="  Last Name" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" Email Address"
+              />
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder=" Password"
+              />
+              <button class="btn">Claim your free trial</button>
+              <p id="para">
+                By clicking the button, you are agreeing to our
+                <span class="terms">Terms and Services</span>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
